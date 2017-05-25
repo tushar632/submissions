@@ -1,0 +1,7 @@
+CREATE TABLE ResourceTbl (
+  resNo   VARCHAR2(8)   NOT NULL,
+  resName VARCHAR2(30)   NOT NULL,
+  rate    DECIMAL(8, 2) NOT NULL,
+  CONSTRAINT checkrate CHECK (rate>0), 
+  CONSTRAINT PK_ResourceTbl PRIMARY KEY (resNo)
+);

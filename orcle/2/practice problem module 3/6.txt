@@ -1,0 +1,1 @@
+Null value arent allowed in the foreign key because the referencing field in a not null(primary) attribute
