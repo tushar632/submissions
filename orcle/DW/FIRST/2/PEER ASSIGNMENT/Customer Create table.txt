@@ -1,0 +1,12 @@
+CREATE TABLE Customer (
+  custNo   VARCHAR2(8)     NOT NULL,
+  custName VARCHAR2(20) NOT NULL,
+  address  VARCHAR2(20) NOT NULL,
+  internal CHAR(1)     NOT NULL,
+  contact  VARCHAR2(20) NOT NULL,
+  phone    VARCHAR2(13) NOT NULL,
+  city     VARCHAR2(20) NOT NULL,
+  state    VARCHAR2(2)  NOT NULL,
+  zip      VARCHAR2(10) NOT NULL,
+  CONSTRAINT CustomerPk PRIMARY KEY (custNo)
+);

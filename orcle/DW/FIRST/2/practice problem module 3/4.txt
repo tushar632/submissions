@@ -1,0 +1,2 @@
+foreign key facno in location references to fac no in facility.
+parent being facility and chilt being location

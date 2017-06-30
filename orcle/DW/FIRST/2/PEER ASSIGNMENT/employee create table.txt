@@ -1,0 +1,8 @@
+CREATE TABLE Employee (
+  empNo      VARCHAR2(8)     NOT NULL,
+  empName    VARCHAR2(40)  NOT NULL,
+  department VARCHAR2(40)  NOT NULL,
+  email      VARCHAR2(50) NOT NULL,
+  phone      VARCHAR2(40)  NOT NULL,
+  CONSTRAINT EmployeePK PRIMARY KEY (empNo)
+);

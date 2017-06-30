@@ -1,0 +1,11 @@
+CREATE TABLE EventPlan (
+  planNo   VARCHAR2(8)  NOT NULL,
+  eventNo   VARCHAR2(8)  NOT NULL,
+  empNo    VARCHAR2(8),
+  workDate DATE     NOT NULL,
+  notes    VARCHAR2(255),
+  activity CHAR(10) NOT NULL,
+  CONSTRAINT PK_EventPlan PRIMARY KEY (planNo),
+  CONSTRAINT FK_EventRequest FOREIGN KEY (eventNo) REFERENCES EventRequest (eventNo),
+  CONSTRAINT FK_Employee FOREIGN KEY (empNo) REFERENCES Employee (empNo)
+);

@@ -1,0 +1,18 @@
+CREATE TABLE EventRequest (
+  eventNo      VARCHAR2(8)       NOT NULL,
+  custNo      VARCHAR2(8)       NOT NULL,
+  facNo       VARCHAR2(8)       NOT NULL,
+  dateHeld    DATE          NOT NULL,
+  dateReq     DATE          NOT NULL,
+  dateAuth    DATE,
+  status      VARCHAR2(20)      NOT NULL,
+  estCost     DECIMAL(8, 2) NOT NULL,
+  estAudience INTEGER       NOT NULL,
+  budNo       VARCHAR2(30),
+  CONSTRAINT EventRequestPK PRIMARY KEY (eventNo),
+  CONSTRAINT EventReqStatur CHECK (status IN ('Pending','Approved','Denied')),
+  CONSTRAINT FK_Facility FOREIGN KEY (facNo) REFERENCES Facility (facNo),
+  CONSTRAINT  Audiencecheck CHECK (estAudience>0),
+  CONSTRAINT FK_Customer FOREIGN KEY (custNo) REFERENCES Customer (custNo)
+
+);
